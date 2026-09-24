@@ -1,0 +1,145 @@
+/* Sketches, coin animation and favourites. */
+.logo-stage {
+  position: relative;
+}
+
+.sketch-art {
+  position: absolute;
+  inset: -4% -4%;
+  width: 108%;
+  height: 108%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.desktop-extras {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px 20px;
+  border-top: 1px dashed #777b88;
+  color: #cbd0df;
+  font-size: 10px;
+}
+
+.desktop-extras button,.save-memory {
+  background: linear-gradient(#555e71,#343a48);
+  color: #f2f0e5;
+  border: 1px solid #9aa4ba;
+  box-shadow: inset 1px 1px #c7ccda,2px 2px #111;
+  padding: 7px 10px;
+  font: inherit;
+}
+
+.desktop-extras button:hover,.save-memory:hover {
+  color: #e7ffb9;
+  transform: translateY(-1px);
+}
+
+.web-badge {
+  border: 1px solid #9ca5b7;
+  padding: 4px 7px;
+  box-shadow: 3px 3px #151820;
+  letter-spacing: 1px;
+}
+
+.tiny-note {
+  font-style: italic;
+}
+
+.coin-pop {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 40;
+  width: 210px;
+  padding: 18px;
+  border: 2px solid #c8c2a9;
+  border-radius: 3px 9px 4px 8px;
+  background: #28282ef5;
+  color: #f4e6ac;
+  box-shadow: 7px 9px #0007;
+  text-align: center;
+  pointer-events: none;
+}
+
+.coin-pop[hidden] {
+  display: none;
+}
+
+.coin-pop img {
+  display: block;
+  width: 115px;
+  margin: 0 auto 12px;
+  animation: coin-toss .9s ease-out both;
+}
+
+.coin-pop strong,.coin-pop span {
+  display: block;
+}
+
+.coin-pop span {
+  font-size: 10px;
+  margin-top: 8px;
+}
+
+@keyframes coin-toss {
+  0% {
+    transform: translateY(65px) rotateY(0deg) scale(.3);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-25px) rotateY(540deg) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) rotateY(1080deg) scale(1);
+  }
+}
+
+.save-memory {
+  margin: 0 14px 14px;
+  font-size: 11px;
+}
+
+.save-memory[aria-pressed="true"] {
+  color: #f3dca1;
+}
+
+.memory[hidden] {
+  display: none !important;
+}
+
+#breathing-status {
+  min-width: 17ch;
+}
+
+.interaction-rest *, .interaction-rest *::before,.interaction-rest *::after {
+  animation-play-state: paused !important;
+  transition: none !important;
+}
+
+.interaction-rest .tab-gif {
+  display: none !important;
+}
+
+.interaction-rest .tab-still {
+  display: block !important;
+}
+
+@media (max-width: 600px) {
+  .desktop-extras {
+    gap: 10px;
+    font-size: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .coin-pop img {
+    animation: none;
+  }
+}
+

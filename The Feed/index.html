@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171923">
+  <meta name="description" content="From my eyes — a personal photo and video archive by purejoy510.">
+  <title>From my eyes — purejoy510</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/interactions.css">
+  <script src="js/script.js" defer></script>
+  <script src="js/interactions.js" defer></script>
+</head>
+<body class="title-page">
+  <div class="monitor">
+    <div class="screen" id="crt-screen">
+      <a class="skip" href="#main">Skip to content</a>
+      <header class="topbar">
+        <a class="brand" href="index.html">purejoy510</a>
+        <span class="channel">1UP &nbsp; 000510</span>
+      </header>
+      <main id="main" class="title-screen">
+        <div class="arcade-hud pixel"><span>PLAYER 01</span><span>HI-SCORE 000510</span></div>
+        <h1>From my eyes</h1>
+        <div class="logo-stage">
+          <img class="sketch-art" src="img/logo-sketch.svg" alt="Hand-drawn stars, an eye, and orbital doodles around the 510 logo">
+          <img class="logo-spin" src="img/510-spin.gif" alt="Spinning 510 logo with a red 5, yellow 1, blue 0 and green disc" width="720" height="460" decoding="async">
+          <img class="logo-still" src="img/510-still.png" alt="Colourful 510 logo with a DVD-inspired oval" width="720" height="460" decoding="async">
+        </div>
+        <a class="start-button pixel" href="thefeed.html"><span aria-hidden="true">›</span> PRESS START</a>
+        <p class="insert-coin pixel">FREE PLAY / 24 MEMORIES</p>
+        <div class="arcade-controls"><button id="insert-credit" type="button">[ C ] INSERT COIN</button><span id="credit-count" aria-live="polite">CREDIT 01</span></div>
+      <div id="coin-pop" class="coin-pop" hidden>
+          <img src="img/coin-sketch.svg" alt="" width="115" height="115">
+          <strong>+1 CREDIT</strong>
+          <span>keep collecting moments</span>
+        </div>
+      </main>
+      <section class="sound-system" aria-label="Background soundtrack controls">
+        <button id="sound-toggle" type="button" aria-pressed="false">♫ SOUND / CONNECTING</button>
+        <details class="music-details"><summary>PLAYER</summary>
+          <div id="spotify-mount"></div>
+          <a href="https://open.spotify.com/track/3vjs2MDHoF9xhylNg6Y9un" target="_blank" rel="noopener noreferrer">OPEN TRACK IN SPOTIFY ↗</a>
+        </details>
+        <span id="music-status" class="sr-only" aria-live="polite"></span>
+      </section>
+      <button class="motion-toggle" type="button" aria-pressed="false">PAUSE ANIMATION</button>
+      <div class="desktop-extras">
+        <span class="web-badge">★ Hello, there.</span><span class="tiny-note">From my eyes</span>
+      </div>
+      <footer class="bottom-bar"><span>© PUREJOY510</span></footer>
+    </div>
+    <div class="monitor-chin" aria-hidden="true"><span>purejoy510</span><i></i></div>
+  </div>
+</body>
+</html>

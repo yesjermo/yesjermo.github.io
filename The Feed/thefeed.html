@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#171923">
+  <meta name="description" content="From my eyes — a personal photo and video archive by purejoy510.">
+  <title>From my eyes — purejoy510</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/interactions.css">
+  <script src="js/script.js" defer></script>
+  <script src="js/interactions.js" defer></script>
+</head>
+<body class="archive-page">
+  <div class="monitor"><div class="screen archive-screen">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <a class="brand" href="index.html">purejoy<span>510</span></a>
+    <span class="top-note">PERSONAL MEDIA / 24 FILES</span>
+    <a class="top-link" href="index.html">TITLE SCREEN</a>
+  </header>
+  <main id="main">
+    <section class="archive-heading">
+      <div><p class="pixel eyebrow">510 / MEDIA DIRECTORY</p><h1>From my eyes</h1><p class="archive-intro">Things I see, places I go.</p></div>
+      <p class="archive-count pixel">24<span>MEMORIES SAVED</span></p>
+    </section>
+    <section class="sound-system" aria-label="Background soundtrack controls">
+        <button id="sound-toggle" type="button" aria-pressed="false">♫ SOUND / CONNECTING</button>
+        <details class="music-details"><summary>PLAYER</summary>
+          <div id="spotify-mount"></div>
+          <a href="https://open.spotify.com/track/3vjs2MDHoF9xhylNg6Y9un" target="_blank" rel="noopener noreferrer">OPEN TRACK IN SPOTIFY ↗</a>
+        </details>
+        <span id="music-status" class="sr-only" aria-live="polite"></span>
+      </section>
+    <nav class="icon-tabs" aria-label="Memory categories">
+      <button type="button" class="icon-tab" data-filter="all" aria-pressed="true"><img class="tab-gif" src="img/icons/gallery.gif" alt="" width="144" height="128" decoding="async"><img class="tab-still" src="img/icons/gallery.png" alt="" width="128" height="128" decoding="async"><span>ALL FILES</span></button>
+      <button type="button" class="icon-tab" data-filter="games" aria-pressed="false"><img class="tab-gif" src="img/icons/dice.gif" alt="" width="144" height="128" decoding="async"><img class="tab-still" src="img/icons/dice.png" alt="" width="128" height="128" decoding="async"><span>PLAY</span></button>
+      <button type="button" class="icon-tab" data-filter="video" aria-pressed="false"><img class="tab-gif" src="img/icons/camcorder.gif" alt="" width="144" height="128" decoding="async"><img class="tab-still" src="img/icons/camcorder.png" alt="" width="128" height="128" decoding="async"><span>VIDEOS</span></button>
+      <button type="button" class="icon-tab" data-filter="photo" aria-pressed="false"><img class="tab-gif" src="img/icons/camera.gif" alt="" width="144" height="128" decoding="async"><img class="tab-still" src="img/icons/camera.png" alt="" width="128" height="128" decoding="async"><span>PHOTOS</span></button>
+      <button type="button" class="icon-tab" data-filter="travel" aria-pressed="false"><img class="tab-gif" src="img/icons/globe.gif" alt="" width="144" height="128" decoding="async"><img class="tab-still" src="img/icons/globe.png" alt="" width="128" height="128" decoding="async"><span>PLACES</span></button>
+      <button type="button" class="random-memory">? <span>RANDOM</span></button>
+    </nav>
+    <p id="filter-status" class="filter-status" aria-live="polite">24 MEMORIES / ALL FILES</p>
+    <div class="archive-toolbar"><p>FILE &nbsp; VIEW &nbsp; MEMORIES</p><a href="index.html">← TITLE SCREEN</a></div>
+    <section id="memory-grid" class="memory-grid" aria-label="Photo and video memories">
+      <figure class="memory" data-groups="">
+        <div class="slot-label"><span>SLOT 01</span><span>VIDEO</span></div>
+        <a class="memory-open" href="img/memory-01.mp4" data-kind="video" data-title="One more alarm" aria-label="Open memory 1: One more alarm">
+          <img src="img/memory-01.jpg" alt="One more alarm" loading="lazy" width="300" height="650" decoding="async">
+          <span class="view-label">▶ PLAY CLIP</span>
+        </a>
+        <figcaption>
+          <h2>One more alarm</h2>
+          <p>alarms in every minute lol.</p>
+        </figcaption>
+      </figure>
+      <figure class="memory" data-groups="">
+        <div class="slot-label"><span>SLOT 02</span><span>VIDEO</span></div>
+        <a class="memory-open" href="img/memory-02.mp4" data-kind="video" data-title="What my day sounds like" aria-label="Open memory 2: What my day sounds like">
+          <img src="img/memory-02.jpg" alt="What my day sounds like" loading="lazy" width="300" height="650" decoding="async">
+          <span class="view-label">▶ PLAY CLIP</span>
+        </a>
+        <figcaption>
+          <h2>What my day sounds like</h2>
+          <p>I like listening to breakcore.</p>
+        </figcaption>
+      </figure>
+      <figure class="memory" data-groups="games">
+        <div class="slot-label"><span>SLOT 03</span><span>VIDEO</span></div>
+        <a class="memory-open" href="img/memory-03.mp4" data-kind="video" data-title="Playing poker" aria-label="Open memory 3: Playing poker">
+          <img src="img/memory-03.jpg" alt="Playing poker" loading="lazy" width="300" height="534" decoding="async">
+          <span class="view-label">▶ PLAY CLIP</span>
+        </a>
+        <figcaption>
+          <h2>Playing poker</h2>
+          <p>Leo said he won all the chips.</p>
+        </figcaption>
+      </figure>
+      <figure class="memory" data-groups="games">
+        <div class="slot-label"><span>SLOT 04</span><span>PHOTO</span></div>
+        <a class="memory-open" href="img/memory-04.jpg" data-kind="photo" data-title="Pixels I can eat" aria-label="Open memory 4: Pixels I can eat">
+          <img src="img/memory-04.jpg" alt="Pixels I can eat" loading="lazy" width="675" height="1200" decoding="async" srcset="img/thumbs/memory-04.jpg 405w, img/memory-04.jpg 675w" sizes="(max-width: 600px) 85vw, (max-width: 1000px) 40vw, 28vw">
+          <span class="view-label">+ VIEW MEMORY</span>
+        </a>
+        <figcaption>
+          <h2>Pixels I can eat</h2>
+          <p>Trying Minecraft x Crumbl for first time. Taste like play-doh.</p>
+        </figcaption>
+      </figure>
+      <figure class="memory" data-groups="travel">
+        <div class="slot-label"><span>SLOT 05</span><span>PHOTO</span></div>
+        <a class="memory-open" href="img/memory-05.jpg" data-kind="photo" data-title="Farm" aria-label="Open memory 5: Farm">
+          <img src="img/memory-05.jpg" alt="Farm" loading="lazy" width="675" height="1200" decoding="async" srcset="img/thumbs/memory-05.jpg 405w, img/memory-05.jpg 675w" sizes="(max-width: 600px) 85vw, (max-width: 1000px) 40vw, 28vw">
+          <span class="view-label">+ VIEW MEMORY</span>
+        </a>
+        <figcaption>
+          <h2>Farm</h2>
+          <p>Cattles farm in Scotland.</p>
+        </figcaption>
+      </figure>
+      <figure class="memory" data-groups="travel">
+        <div class="slot-label"><span>SLOT 06</span><span>PHOTO</span></div>
+        <a class="memory-open" href="img/memory-06.jpg" data-kind="photo" data-title="IDK??" aria-label="Open memory 6: IDK??">
+          <img src="img/memory-06.jpg" alt="IDK??" loading="lazy" width="675" height="1200" decoding="async" srcset="img/thumbs/memory-06.jpg 405w, img/memory-06.jpg 675w" sizes="(max-width: 600px) 85vw, (max-width: 1000px) 40vw, 28vw">
+          <span class="view-label">+ VIEW MEMORY</span>
+        </a>
+        <figcaption>
+          <h2>IDK??</h2>
+          <p>IDK where is that honestly.</p>
+        </figcaption>
+      </figure>
+      <figure class="memory" data-groups="travel">
+        <div class="slot-label"><span>SLOT 07</span><span>PHOTO</span></div>
+        <a class="memory-open" href="img/memory-07.jpg" data-kind="photo" data-title="Window seat" aria-label="Open memory 7: Window seat">
+          <img src="img/memory-07.jpg" alt="Window seat" loading="lazy" width="675" height="1200" decoding="async" srcset="img/thumbs/memory-07.jpg 405w, img/memory-07.jpg 675w" sizes="(max-width: 600px) 85vw, (max-width: 1000px) 40vw, 28vw">
+          <span class="view-label">+ VIEW MEMORY</span>
+        </a>
+        <figcaption>
+          <h2>Window seat</h2>
+          <p>😲😲</p>
+        </figcaption>
+      </figure>
+      <figure class="memory" data-groups="travel">
+        <div class="slot-label"><span>SLOT 08</span><span>PHOTO</span></div>
+        <a class="memory-open" href="img/memory-08.jpg" data-kind="photo" data-title="Still awake" aria-label="Open memory 8: Still awake">
+          <img src="img/memory-08.jpg" alt="Still awake" loading="lazy" width="675" height="1200" decoding="async" srcset="img/thumbs/memory-08.jpg 405w, img/memory-08.jpg 675w" sizes="(max-width: 600px) 85vw, (max-width: 1000px) 40vw, 28vw">
+          <span class="view-label">+ VIEW MEMORY</span>
+        </a>
+        <figcaption>
+          <h2>Still awake</h2>
+          <p>When in UK.</p>
+        </figcaption>
+      </figure>
+      <figure class="memory" data-groups="games">
+        <div class="slot-label"><span>SLOT 09</span><span>PHOTO</span></div>y
+        <a class="memory-open" href="img/memory-09.jpg" data-kind="photo" data-title="Poster from my brother" aria-label="Open memory 9: Poster from my brother">
+          <img src="img/memory-09.jpg" alt="Poster from my brother" loading="lazy" width="960" height="1200" decoding="async" srcset="img/thumbs/memory-09.jpg 576w, img/memory-09.jpg 960w" sizes="(max-width: 600px) 85vw, (max-width: 1000px) 40vw, 28vw">
+          <span class="view-label">+ VIEW MEMORY</span>
+        </a>
+        <figcaption>
+          <h2>Poster from my brother</h2>
+          <p>My brother designed this poster for his skateboard brand.</p>
+        </figcaption>
+      </figure>
+      <figure class="memory" data-groups="travel">
+        <div class="slot-label"><span>SLOT 10</span><span>PHOTO</span></div>
+        <a class="memory-open" href="img/memory-10.jpg" data-kind="photo" data-title="Parachuting in Portugal" aria-label="Open memory 10: Parachuting in Portugal">
+          <img src="img/memory-10.jpg" alt="Parachuting in Portugal" loading="lazy" width="675" height="1200" decoding="async" srcset="img/thumbs/memory-10.jpg 405w, img/memory-10.jpg 675w" sizes="(max-width: 600px) 85vw, (max-width: 1000px) 40vw, 28vw">
+          <span class="view-label">+ VIEW MEMORY</span>
+        </a>
+        <figcaption>
+          <h2>Parachuting in Portugal</h2>
+          <p>Blue sky!!!</p>
+        </figcaption>
+      </figure>
+      <figure class="memory" data-groups="">
+        <div class="slot-label"><span>SLOT 11</span><span>PHOTO</span></div>
+        <a class="memory-open" href="img/memory-11.jpg" data-kind="photo" data-title="A chair called Chair" aria-label="Open memory 11: A chair called Chair">
+          <img src="img/memory-11.jpg" alt="A chair called Chair" loading="lazy" width="675" height="1200" decoding="async" srcset="img/thumbs/memory-11.jpg 405w, img/memory-11.jpg 675w" sizes="(max-width: 600px) 85vw, (max-width: 1000px) 40vw, 28vw">
+          <span class="view-label">+ VIEW MEMORY</span>
+        </a>
+        <figcaption>
+          <h2>A chair called Chair</h2>
+          <p>Found it in Seoul.</p>
+        </figcaption>
+      </figure>
+      <figure class="memory" data-groups="travel">
+        <div class="slot-label"><span>SLOT 12</span><span>PHOTO</span></div>
+        <a class="memory-open" href="img/memory-12.jpg" data-kind="photo" data-title="🌊🌊" aria-label="Open memory 12: 🌊🌊">
+          <img src="img/memory-12.jpg" alt="🌊🌊" loading="lazy" width="675" height="1200" decoding="async" srcset="img/thumbs/memory-12.jpg 405w, img/memory-12.jpg 675w" sizes="(max-width: 600px) 85vw, (max-width: 1000px) 40vw, 28vw">
+          <span class="view-label">+ VIEW MEMORY</span>
+        </a>
+        <figcaption>
+          <h2>🌊🌊</h2>
+          <p>Blue water and an open horizon.</p>
+        </figcaption>
+      </figure>
+      <figure class="memory" data-groups="travel">
+        <div class="slot-label"><span>SLOT 13</span><span>VIDEO</span></div>
+        <a class="memory-open" href="img/memory-13.mp4" data-kind="video" data-title="BIG BEN!!!" aria-label="Open memory 13: BIG BEN!!!">
+          <img src="img/memory-13.jpg" alt="BIG BEN!!!" loading="lazy" width="300" height="534" decoding="async">
+          <span class="view-label">▶ PLAY CLIP</span>
+        </a>
+        <figcaption>
+          <h2>BIG BEN!!!</h2>
+          <p>Look at the BIG ASS BEN.</p>
+        </figcaption>
+      </figure>
+      <figure class="memory" data-groups="travel">
+        <div class="slot-label"><span>SLOT 14</span><span>VIDEO</span></div>
+        <a class="memory-open" href="img/memory-14.mp4" data-kind="video" data-title="Bayern Munich vs Aston Villa" aria-label="Open memory 14: Bayern Munich vs Aston Villa">
+          <img src="img/memory-14.jpg" alt="Bayern Munich vs Aston Villa" loading="lazy" width="300" height="534" decoding="async">
+          <span class="view-label">▶ PLAY CLIP</span>
+        </a>
+        <figcaption>
+          <h2>Bayern Munich vs Aston Villa</h2>
+          <p>First time watching Aston Villa. The atmosphere was electric!</p>
+        </figcaption>
+      </figure>
+      <figure class="memory" data-groups="">
+        <div class="slot-label"><span>SLOT 15</span><span>PHOTO</span></div>
+        <a class="memory-open" href="img/memory-15.jpg" data-kind="photo" data-title="UNI!!!!" aria-label="Open memory 15: UNI!!!!">
+          <img src="img/memory-15.jpg" alt="UNI!!!!" loading="lazy" width="675" height="1200" decoding="async" srcset="img/thumbs/memory-15.jpg 405w, img/memory-15.jpg 675w" sizes="(max-width: 600px) 85vw, (max-width: 1000px) 40vw, 28vw">
+          <span class="view-label">+ VIEW MEMORY</span>
+        </a>
+        <figcaption>
+          <h2>UNI!!!!</h2>
+          <p>I love eating uni and tuna! It was so good...</p>
+        </figcaption>
+      </figure>
+      <figure class="memory" data-groups="">
+        <div class="slot-label"><span>SLOT 16</span><span>PHOTO</span></div>
+        <a class="memory-open" href="img/memory-16.jpg" data-kind="photo" data-title="???" aria-label="Open memory 16: ???">
+          <img src="img/memory-16.jpg" alt="???" loading="lazy" width="962" height="1200" decoding="async" srcset="img/thumbs/memory-16.jpg 577w, img/memory-16.jpg 962w" sizes="(max-width: 600px) 85vw, (max-width: 1000px) 40vw, 28vw">
+          <span class="view-label">+ VIEW MEMORY</span>
+        </a>
+        <figcaption>
+          <h2>???</h2>
+          <p>Parking.</p>
+        </figcaption>
+      </figure>
+      <figure class="memory" data-groups="">
+        <div class="slot-label"><span>SLOT 17</span><span>PHOTO</span></div>
+        <a class="memory-open" href="img/memory-17.jpg" data-kind="photo" data-title="Made a cake!!!" aria-label="Open memory 17: Made a cake!!!">
+          <img src="img/memory-17.jpg" alt="Made a cake!!!" loading="lazy" width="900" height="1200" decoding="async" srcset="img/thumbs/memory-17.jpg 540w, img/memory-17.jpg 900w" sizes="(max-width: 600px) 85vw, (max-width: 1000px) 40vw, 28vw">
+          <span class="view-label">+ VIEW MEMORY</span>
+        </a>
+        <figcaption>
+          <h2>Made a cake!!!</h2>
+          <p>First time making one!</p>
+        </figcaption>
+      </figure>
+      <figure class="memory" data-groups="">
+        <div class="slot-label"><span>SLOT 18</span><span>PHOTO</span></div>
+        <a class="memory-open" href="img/memory-18.jpg" data-kind="photo" data-title="Nicole's birthday on highlight" aria-label="Open memory 18: Nicole's birthday on highlight">
+          <img src="img/memory-18.jpg" alt="Nicole's birthday on highlight" loading="lazy" width="553" height="1200" decoding="async" srcset="img/thumbs/memory-18.jpg 332w, img/memory-18.jpg 553w" sizes="(max-width: 600px) 85vw, (max-width: 1000px) 40vw, 28vw">
+          <span class="view-label">+ VIEW MEMORY</span>
+        </a>
+        <figcaption>
+          <h2>Nicole's birthday on highlight</h2>
+          <p>Saved in my camera roll.</p>
+        </figcaption>
+      </figure>
+      <figure class="memory" data-groups="travel">
+        <div class="slot-label"><span>SLOT 19</span><span>PHOTO</span></div>
+        <a class="memory-open" href="img/memory-19.jpg" data-kind="photo" data-title="Niagara Falls" aria-label="Open memory 19: Niagara Falls">
+          <img src="img/memory-19.jpg" alt="Niagara Falls" loading="lazy" width="900" height="1200" decoding="async" srcset="img/thumbs/memory-19.jpg 540w, img/memory-19.jpg 900w" sizes="(max-width: 600px) 85vw, (max-width: 1000px) 40vw, 28vw">
+          <span class="view-label">+ VIEW MEMORY</span>
+        </a>
+        <figcaption>
+          <h2>Niagara Falls</h2>
+          <p>WOW.</p>
+        </figcaption>
+      </figure>
+      <figure class="memory" data-groups="travel">
+        <div class="slot-label"><span>SLOT 20</span><span>PHOTO</span></div>
+        <a class="memory-open" href="img/memory-20.jpg" data-kind="photo" data-title="Snowing in Montreal" aria-label="Open memory 20: Snowing in Montreal">
+          <img src="img/memory-20.jpg" alt="Snowing in Montreal" loading="lazy" width="960" height="1200" decoding="async" srcset="img/thumbs/memory-20.jpg 576w, img/memory-20.jpg 960w" sizes="(max-width: 600px) 85vw, (max-width: 1000px) 40vw, 28vw">
+          <span class="view-label">+ VIEW MEMORY</span>
+        </a>
+        <figcaption>
+          <h2>Snowing in Montreal</h2>
+          <p>Snow, trees and the last blue light.</p>
+        </figcaption>
+      </figure>
+      <figure class="memory" data-groups="travel">
+        <div class="slot-label"><span>SLOT 21</span><span>PHOTO</span></div>
+        <a class="memory-open" href="img/memory-21.jpg" data-kind="photo" data-title="CN tower" aria-label="Open memory 21: CN tower">
+          <img src="img/memory-21.jpg" alt="CN tower" loading="lazy" width="908" height="1200" decoding="async" srcset="img/thumbs/memory-21.jpg 545w, img/memory-21.jpg 908w" sizes="(max-width: 600px) 85vw, (max-width: 1000px) 40vw, 28vw">
+          <span class="view-label">+ VIEW MEMORY</span>
+        </a>
+        <figcaption>
+          <h2>CN tower</h2>
+          <p>Saw it when I cross the road.</p>
+        </figcaption>
+      </figure>
+      <figure class="memory" data-groups="">
+        <div class="slot-label"><span>SLOT 22</span><span>PHOTO</span></div>
+        <a class="memory-open" href="img/memory-22.jpg" data-kind="photo" data-title="October Coffee" aria-label="Open memory 22: October Coffee">
+          <img src="img/memory-22.jpg" alt="October Coffee" loading="lazy" width="675" height="1200" decoding="async" srcset="img/thumbs/memory-22.jpg 405w, img/memory-22.jpg 675w" sizes="(max-width: 600px) 85vw, (max-width: 1000px) 40vw, 28vw">
+          <span class="view-label">+ VIEW MEMORY</span>
+        </a>
+        <figcaption>
+          <h2>October Coffee</h2>
+          <p>Wait? What's that drink? Was it Cold Brew?</p>
+        </figcaption>
+      </figure>
+      <figure class="memory" data-groups="">
+        <div class="slot-label"><span>SLOT 23</span><span>PHOTO</span></div>
+        <a class="memory-open" href="img/memory-23.jpg" data-kind="photo" data-title="Checking the weather" aria-label="Open memory 23: Checking the weather">
+          <img src="img/memory-23.jpg" alt="Checking the weather" loading="lazy" width="553" height="1200" decoding="async" srcset="img/thumbs/memory-23.jpg 332w, img/memory-23.jpg 553w" sizes="(max-width: 600px) 85vw, (max-width: 1000px) 40vw, 28vw">
+          <span class="view-label">+ VIEW MEMORY</span>
+        </a>
+        <figcaption>
+          <h2>Checking the weather</h2>
+          <p>Before competition in Sydney.</p>
+        </figcaption>
+      </figure>
+      <figure class="memory" data-groups="">
+        <div class="slot-label"><span>SLOT 24</span><span>VIDEO</span></div>
+        <a class="memory-open" href="img/memory-24.mp4" data-kind="video" data-title="Biking" aria-label="Open memory 24: Biking">
+          <img src="img/memory-24.jpg" alt="Biking" loading="lazy" width="300" height="534" decoding="async">
+          <span class="view-label">▶ PLAY CLIP</span>
+        </a>
+        <figcaption>
+          <h2>Biking</h2>
+          <p>I miss the speaker knockerzzz.</p>
+        </figcaption>
+      </figure>
+    </section>
+    <div class="archive-ending"><p class="pixel">TO BE CONTINUED...</p><a href="index.html">← RETURN TO TITLE</a></div>
+  </main>
+  <button class="motion-toggle" type="button" aria-pressed="false">PAUSE ANIMATION</button>
+      <div class="desktop-extras">
+        <span class="web-badge">★ PERSONAL WEB / EST. 2026</span><button type="button" id="saved-filter" aria-pressed="false">♡ FAVOURITES <span id="saved-count">0</span></button><span id="breathing-status" role="status">TAKE YOUR TIME.</span>
+      </div>
+      <footer class="bottom-bar"><span>© 2026 PUREJOY510</span><a href="#main">BACK TO TOP ↑</a></footer>
+    </div><div class="monitor-chin" aria-hidden="true"><span>purejoy510</span><i></i></div></div>
+  <dialog id="memory-viewer" aria-labelledby="viewer-title">
+    <div class="viewer-top"><span class="pixel" id="viewer-slot"></span><button class="close-viewer" type="button" aria-label="Close memory">CLOSE ×</button></div>
+    <div id="viewer-media"></div>
+    <div class="viewer-caption"><h2 id="viewer-title"></h2><p id="viewer-caption"></p></div>
+    <div class="viewer-nav"><button type="button" id="previous">← PREVIOUS</button><span id="viewer-counter"></span><button type="button" id="next">NEXT →</button></div>
+  </dialog>
+</body>
+</html>

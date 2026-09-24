@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <g fill="#e9db96" stroke="#30291e" stroke-width="2.5">
+  <path d="M59 9C89 6 111 30 110 59S90 109 59 111 8 90 9 60 29 11 59 9Z"/>
+  <path fill="none" d="M58 18C84 15 103 36 101 60S82 101 58 101 17 82 19 58 34 20 58 18Z M31 31l8 3 M84 28l-5 8 M25 80l10-4 M81 87l5-7"/>
+  </g>
+  <text x="60" y="72" text-anchor="middle" font-family="monospace" font-size="34" fill="#30291e">510</text>
+</svg>

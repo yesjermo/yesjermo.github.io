@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">
+  <g fill="none" stroke="#e3e0c9" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M45 103l7-25 8 24 24 7-23 8-9 25-7-24-23-8z M501 273l9-30 9 28 28 10-29 8-8 30-8-29-26-9z M493 74l5-14 5 14 15 5-15 6-5 16-5-16-15-5z"/>
+  <path d="M57 266q33-40 65 1-34 36-65-1z M61 268q29-31 57-1 M91 252c-18 0-16 32 1 30 18-1 15-28-1-30z M91 259v15 M69 243l-9-13 M87 237l-1-17 M107 241l8-14"/>
+  <path d="M151 347c91 48 252 39 300-12 M163 354c90 30 214 35 271-8 M433 323l21 10-11 23 M133 60q35-18 64-13 M387 48l32 10-21 11"/>
+  <ellipse cx="490" cy="170" rx="24" ry="26" transform="rotate(-18 490 170)"/>
+  <ellipse cx="490" cy="170" rx="45" ry="9" transform="rotate(-24 490 170)"/>
+  <path d="M143 167l6 9-7 7 M443 217l9 3 M37 179l10 5 M300 381l3 8 8 1-7 5 1 9-6-6-8 3 3-8-5-6z"/>
+  </g>
+  <g fill="#e3e0c9" font-family="cursive" font-size="16">
+  <text x="107" y="328" transform="rotate(-9 107 328)">a little bit of my world</text>
+  <text x="389" y="106" transform="rotate(10 389 106)">stay curious ☆</text>
+  </g>
+</svg>
