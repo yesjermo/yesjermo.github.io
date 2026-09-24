@@ -1,5 +1,5 @@
 FROM MY EYES — Allan Fung / purejoy510
-Project 1 / Step 5
+Project 1 / THE FEED
 
 Open index.html, then press START to view the feed.
 Keep the folders together. No installation or build is needed.
