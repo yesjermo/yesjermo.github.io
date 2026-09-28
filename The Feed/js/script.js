@@ -162,3 +162,71 @@ if (motionToggle) {
   preference.addEventListener('change', () => { paused = preference.matches; setMotion(); });
   setMotion();
 }
+
+// Classic DVD screensaver: the still logo drifts across the screen and flips at each wall.
+const dvdStage = document.querySelector('#dvd-stage');
+const dvdLogo = document.querySelector('#dvd-logo');
+if (dvdStage && dvdLogo) {
+  const speed = 0.085; // pixels per millisecond, roughly 85px a second
+  let x = 0;
+  let y = 0;
+  let dx = 1;
+  let dy = 1;
+  let hue = 0;
+  let last = 0;
+  let placed = false;
+
+  function bounds() {
+    // Never negative: a logo wider than the stage simply parks against the left wall.
+    return {
+      width: Math.max(dvdStage.clientWidth - dvdLogo.offsetWidth, 0),
+      height: Math.max(dvdStage.clientHeight - dvdLogo.offsetHeight, 0)
+    };
+  }
+
+  function place() {
+    dvdLogo.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)`;
+  }
+
+  function recolour() {
+    hue = (hue + 47 + Math.floor(Math.random() * 60)) % 360;
+    dvdLogo.style.filter = `hue-rotate(${hue}deg)`;
+  }
+
+  function step(now) {
+    const limits = bounds();
+    if (dvdStage.clientWidth && dvdLogo.offsetWidth) {
+      const moving = !document.body.classList.contains('motion-paused');
+      if (!placed) {
+        // A still screen parks the logo in the middle; a moving one starts somewhere random.
+        x = moving ? Math.random() * limits.width : limits.width / 2;
+        y = moving ? Math.random() * limits.height : limits.height / 2;
+        placed = true;
+      }
+      const elapsed = Math.min(now - last, 48);
+      if (moving && last) {
+        x += dx * speed * elapsed;
+        y += dy * speed * elapsed;
+        if (x <= 0 || x >= limits.width) {
+          dx = -dx;
+          x = Math.min(Math.max(x, 0), limits.width);
+          recolour();
+        }
+        if (y <= 0 || y >= limits.height) {
+          dy = -dy;
+          y = Math.min(Math.max(y, 0), limits.height);
+          recolour();
+        }
+      } else {
+        // Keep the logo inside the frame after a resize or while animation is paused.
+        x = Math.min(x, limits.width);
+        y = Math.min(y, limits.height);
+      }
+      place();
+    }
+    last = now;
+    window.requestAnimationFrame(step);
+  }
+
+  window.requestAnimationFrame(step);
+}
