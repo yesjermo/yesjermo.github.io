@@ -1,0 +1,44 @@
+/* Large arcade cursors. The hotspot sits at the arrow tip. */
+@media (any-pointer: fine) {
+  html,
+  body {
+    cursor: url("../img/cursor-arrow.png") 2 2, auto;
+  }
+
+  a,
+  button,
+  summary,
+  .music-details summary,
+  [role="button"],
+  input[type="button"],
+  input[type="submit"],
+  input[type="checkbox"],
+  input[type="radio"],
+  select,
+  .memory-open {
+    cursor: url("../img/cursor-hover.png") 2 2, pointer;
+  }
+
+  a:active,
+  button:active,
+  summary:active,
+  .music-details summary:active,
+  [role="button"]:active,
+  .memory-open:active {
+    cursor: url("../img/cursor-pressed.png") 2 2, pointer;
+  }
+
+  input:not([type="button"]):not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]),
+  textarea,
+  [contenteditable="true"] {
+    cursor: text;
+  }
+
+  button:disabled,
+  input:disabled,
+  select:disabled,
+  textarea:disabled,
+  [aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+}
